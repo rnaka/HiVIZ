@@ -5,3 +5,7 @@ body {
 .ui.secondary.pointing.top.attached.three.item.inverted.menu {
   background-color: #004e7c;
 }
+
+.median_age {
+  font-weight: normal;
+}

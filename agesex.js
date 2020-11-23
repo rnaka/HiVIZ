@@ -198,5 +198,35 @@ Plotly.d3.csv("Age_and_Sex_2019_Male.csv", function(data_male) {
     var myChart2 = Plotly.plot(asplotdiv, data2, plotLayout);
     // END SECOND TRACE
 
+    // pie chart
+    var plotLayoutPie = {
+      title: "Male vs Female Ratio in Hawaii",
+      font: {
+        family: 'Arial',
+        size: 12,
+        color: '#333333'
+      },
+      showlegend: false,
+      paper_bgcolor: "#dce1e3",
+      piecolorway: ["#b73225", "#004e7c"]
+    };
+
+    pieDiv = document.getElementById("as_pie");
+
+    // START THIRD TRACE
+    var trace = {
+      labels: ['Male', 'Female'],
+      values: [age_male[0], age_female[0]],
+      type: 'pie',
+      mode: 'markers',
+      texttemplate: "<b>%{label}</b><br>%{value}<br>%{percent}",
+      rotation: 30,
+      name: 'Male vs Female Ratio in Hawaii'
+    };
+
+    data = [trace];
+
+    var myChart = Plotly.plot(pieDiv, data, plotLayoutPie);
+
   });
 });
