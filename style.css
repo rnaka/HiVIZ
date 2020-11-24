@@ -6,23 +6,23 @@ body {
   background-color: #004e7c;
 }
 
-.median_age {
+.medianAge {
   font-weight: normal;
 }
 
-.title_text {
+.titleText {
   font-weight: bold;
   font-size: 75pt;
   color: #333333;
 }
 
-.topic_header_text {
+.topicHeaderText {
   font-weight: bold;
   font-size: 36pt;
   color: #333333;
 }
 
-.topic_text {
+.topicText {
   font-weight: bold;
   font-size: 30pt;
   color: #333333;
