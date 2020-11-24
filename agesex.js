@@ -26,15 +26,15 @@ Plotly.d3.csv("Age_and_Sex_2019_Male.csv", function(data_male) {
     cg_male_new.push("70-79");
     cg_male_new.push("80+");
 
-    age_male_new.push(parseInt(age_male[1]) + parseInt(age_male[2]));
-    age_male_new.push(parseInt(age_male[3]) + parseInt(age_male[4]) + parseInt(age_male[5]));
-    age_male_new.push(parseInt(age_male[6]) + parseInt(age_male[7]) + parseInt(age_male[8]) + parseInt(age_male[9]));
-    age_male_new.push(parseInt(age_male[10]) + parseInt(age_male[11]));
-    age_male_new.push(parseInt(age_male[12]) + parseInt(age_male[13]));
-    age_male_new.push(parseInt(age_male[14]) + parseInt(age_male[15]));
-    age_male_new.push(parseInt(age_male[16]) + parseInt(age_male[17]) + parseInt(age_male[18]) + parseInt(age_male[19]));
-    age_male_new.push(parseInt(age_male[20]) + parseInt(age_male[21]));
-    age_male_new.push(parseInt(age_male[22]) + parseInt(age_male[23]));
+    age_male_new.push((parseInt(age_male[1]) + parseInt(age_male[2])).toString());
+    age_male_new.push((parseInt(age_male[3]) + parseInt(age_male[4]) + parseInt(age_male[5])).toString());
+    age_male_new.push((parseInt(age_male[6]) + parseInt(age_male[7]) + parseInt(age_male[8]) + parseInt(age_male[9])).toString());
+    age_male_new.push((parseInt(age_male[10]) + parseInt(age_male[11])).toString());
+    age_male_new.push((parseInt(age_male[12]) + parseInt(age_male[13])).toString());
+    age_male_new.push((parseInt(age_male[14]) + parseInt(age_male[15])).toString());
+    age_male_new.push((parseInt(age_male[16]) + parseInt(age_male[17]) + parseInt(age_male[18]) + parseInt(age_male[19])).toString());
+    age_male_new.push((parseInt(age_male[20]) + parseInt(age_male[21])).toString());
+    age_male_new.push((parseInt(age_male[22]) + parseInt(age_male[23])).toString());
 
     for (let i = 0; i < data_female.length; i++) {
       cg_female.push(data_female[i].Category);
@@ -51,15 +51,15 @@ Plotly.d3.csv("Age_and_Sex_2019_Male.csv", function(data_male) {
     cg_female_new.push("70-79");
     cg_female_new.push("80+");
 
-    age_female_new.push(parseInt(age_female[1]) + parseInt(age_female[2]));
-    age_female_new.push(parseInt(age_female[3]) + parseInt(age_female[4]) + parseInt(age_female[5]));
-    age_female_new.push(parseInt(age_female[6]) + parseInt(age_female[7]) + parseInt(age_female[8]) + parseInt(age_female[9]));
-    age_female_new.push(parseInt(age_female[10]) + parseInt(age_female[11]));
-    age_female_new.push(parseInt(age_female[12]) + parseInt(age_female[13]));
-    age_female_new.push(parseInt(age_female[14]) + parseInt(age_female[15]));
-    age_female_new.push(parseInt(age_female[16]) + parseInt(age_female[17]) + parseInt(age_female[18]) + parseInt(age_female[19]));
-    age_female_new.push(parseInt(age_female[20]) + parseInt(age_female[21]));
-    age_female_new.push(parseInt(age_female[22]) + parseInt(age_female[23]));
+    age_female_new.push((parseInt(age_female[1]) + parseInt(age_female[2])).toString());
+    age_female_new.push((parseInt(age_female[3]) + parseInt(age_female[4]) + parseInt(age_female[5])).toString());
+    age_female_new.push((parseInt(age_female[6]) + parseInt(age_female[7]) + parseInt(age_female[8]) + parseInt(age_female[9])).toString());
+    age_female_new.push((parseInt(age_female[10]) + parseInt(age_female[11])).toString());
+    age_female_new.push((parseInt(age_female[12]) + parseInt(age_female[13])).toString());
+    age_female_new.push((parseInt(age_female[14]) + parseInt(age_female[15])).toString());
+    age_female_new.push((parseInt(age_female[16]) + parseInt(age_female[17]) + parseInt(age_female[18]) + parseInt(age_female[19])).toString());
+    age_female_new.push((parseInt(age_female[20]) + parseInt(age_female[21])).toString());
+    age_female_new.push((parseInt(age_female[22]) + parseInt(age_female[23])).toString());
 
     // get male table div
     tableDivMale = document.getElementById('table_male');
@@ -85,7 +85,7 @@ Plotly.d3.csv("Age_and_Sex_2019_Male.csv", function(data_male) {
         font: { family: "Arial", size: 11, color: ["black"] },
         format: [
           "",
-          " >4,3f",
+          "⠀>7,f",
         ],
       }
     }];
@@ -208,7 +208,8 @@ Plotly.d3.csv("Age_and_Sex_2019_Male.csv", function(data_male) {
       },
       showlegend: false,
       paper_bgcolor: "#dce1e3",
-      piecolorway: ["#b73225", "#004e7c"]
+      piecolorway: ["#b73225", "#004e7c"],
+      height: 440
     };
 
     pieDiv = document.getElementById("as_pie");
