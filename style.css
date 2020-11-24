@@ -10,23 +10,23 @@ body {
   font-weight: normal;
 }
 
-/*.title_text {*/
-/*  font-weight: bold;*/
-/*  font-size: 75pt;*/
-/*  color: #333333;*/
-/*}*/
+.title_text {
+  font-weight: bold;
+  font-size: 75pt;
+  color: #333333;
+}
 
-/*.topic_header_text {*/
-/*  font-weight: bold;*/
-/*  font-size: 36pt;*/
-/*  color: #333333;*/
-/*}*/
+.topic_header_text {
+  font-weight: bold;
+  font-size: 36pt;
+  color: #333333;
+}
 
-/*.topic_text {*/
-/*  font-weight: bold;*/
-/*  font-size: 30pt;*/
-/*  color: #333333;*/
-/*}*/
+.topic_text {
+  font-weight: bold;
+  font-size: 30pt;
+  color: #333333;
+}
 
 /*#homepage_col1, #homepage_col2 {*/
 /*  background-color: #b73225;*/
