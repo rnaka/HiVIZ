@@ -31,3 +31,10 @@ body {
 /*#homepage_col1, #homepage_col2 {*/
 /*  background-color: #b73225;*/
 /*}*/
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    width: 1300px;
+}

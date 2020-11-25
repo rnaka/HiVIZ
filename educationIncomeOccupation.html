@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>2019 Income, Education, and Occupation Types</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+  <script src="https://d3js.org/d3.v6.min.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <style>
+    body {background-color: #dce1e3;}
+    font {font-family: Arial; color: #333333;}
+  </style>
+</head>
+
+<body>
+  <div class="ui secondary pointing top attached three item inverted menu">
+    <a class="item" href="index.html">Home<i class="home icon"></i></a>
+    <a class="item" href="viz.html">The Questions</a>
+    <a class="item" href="datasets.html">The Data Sets</a>
+  </div>
+  <div id="as_question" style="width: 100%; float: left; text-align: center; margin-top: 2%; margin-bottom: 2%">
+    <h2 style="color: #333333; font-family: Arial">Q: Does education affect the income and types of jobs available in Hawaii?</h2>
+  	<hr style="border: 2px solid black;">
+  </div>
+ 
+  <div>
+  	<h3 style="text-align:center"> Hawaii Education Attainment by Sex (Over 25 Years Old)</h3>
+  	<div class="grid-container">
+	  <div id="table1" class="grid-child" style="height: 450px;width: 75%; padding-left: 10%; padding-top: 5%"></div>
+  	  <div id="educationbysex" class="grid-child" style="height: 500px;"></div>
+    </div>
+  </div>
+  <br><br>
+  
+  <div>
+    <h3 style="text-align:center"> Hawaii Education Attainment by Race (Over 25 Years Old)</h3>
+    <div class="grid-container">
+      <div id="table2" class="grid-child" style="height: 470px;width: 90%; padding-left: 5%;"></div>
+  	  <div id="educationracepie" class="grid-child" style="height: 500px;"></div>
+  	</div>
+  </div>
+  
+  <div>
+    <h3 style="text-align:center"> Hawaii Earning by Education Attainment</h3>
+    <div class="grid-container">
+      <div id="table3" class="grid-child" style="height: 470px;width: 95%; padding-left: 2%;padding-top: 8%"></div>
+  	  <div id="earningbyeducationbar" class="grid-child" style="height: 500px;"></div>
+  	</div>
+  </div>
+  <br><br>
+  
+  <div>
+    <h3 style="text-align:center">Hawaii Poverty by Education Attainment</h3>
+    <div class="grid-container">
+      <div id="table4" class="grid-child" style="height: 300px;width: 77%; padding-left: 10%; padding-top: 5%"></div>
+  	  <div id="povertybyeducaionpie" class="grid-child" style="height: 400px;"></div>
+  	</div>
+  </div>
+  
+  <div>
+    <h3 style="text-align:center">Hawaii Employment by Education Attainment</h3>
+    <div class="grid-container">
+      <div id="table5" class="grid-child" style="height: 300px;width: 77%; padding-left: 10%; padding-top:5%"></div>
+  	  <div id="employmentbyeducationpie" class="grid-child" style="height: 400px;"></div>
+  	</div>
+  </div>
+
+  <div>
+    <h3 style="text-align:center">Hawaii Employment by Race</h3>
+    <div class="grid-container">
+      <div id="table6" class="grid-child" style="height: 400px;width: 77%; padding-left: 10%;"></div>
+  	  <div id="employmentbyrace" class="grid-child" style="height: 500px;"></div>
+  	</div>
+  </div>
+  
+  <div>
+    <h3 style="text-align:center">Hawaii Occupation Types</h3>
+    <div id="table7"></div>
+    <div id="occupationsalarygraph" style="padding-left: 10%; width: 80%"></div>
+    <div id="occupationemploymentpie" style="padding-left: 15%; width: 80%"></div>    
+  </div>
+  
+</body>
+<script src="educationIncomeOccupation.js"></script>
+</html>
