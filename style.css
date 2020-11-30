@@ -2,7 +2,7 @@ body {
   height: 95vh;
 }
 
-.ui.secondary.pointing.top.attached.three.item.inverted.menu {
+.ui.secondary.pointing.top.attached.five.item.inverted.menu {
   background-color: #004e7c;
 }
 
@@ -13,12 +13,6 @@ body {
 .titleText {
   font-weight: bold;
   font-size: 75pt;
-  color: #333333;
-}
-
-.topicHeaderText {
-  font-weight: bold;
-  font-size: 36pt;
   color: #333333;
 }
 
