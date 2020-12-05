@@ -32,3 +32,8 @@ body {
     grid-gap: 10px;
     width: 1300px;
 }
+
+.summary.text {
+  font-family: Arial;
+  font-size: 11pt;
+}
