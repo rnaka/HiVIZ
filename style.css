@@ -22,10 +22,6 @@ body {
   color: #333333;
 }
 
-/*#homepage_col1, #homepage_col2 {*/
-/*  background-color: #b73225;*/
-/*}*/
-
 .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -36,4 +32,5 @@ body {
 .summary.text {
   font-family: Arial;
   font-size: 11pt;
+  color: #333333;
 }
