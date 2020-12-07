@@ -299,16 +299,18 @@ var layout = {
 Plotly.newPlot('LangChart1', data, layout);
 
 var trace1 = {
-  x: ['Asian','White','Two or More Races', 'Native Hawaiian/Pacific Islander', 'Black or African American','Some Other Race','American Indian and Alaska Native'],
-  y: [536842,355612,341756,143274,26266,15292,2987],
+  x: ['Asian','White','Two or More Races', 'Native Hawaiian/Pacific Islander', 'Black or African American','American Indian and Alaska Native'],
+  y: [37.8,25,24,10.1,1.85,0.21],
   name: 'HI',
+  marker: {color: '#004e7c'},
   type: 'bar'
 };
 
 var trace2 = {
-  x: ['Asian', 'White','Two or More Races', 'Native Hawaiian/Pacific Islander', 'Black or African American','Hispanic or Latino','American Indian and Alaska Native','White alone, not Hispanic or Latino'],
-  y: [19366132,250446756,9190707,656479,43984096,60724312,4267114,197271953],
+  x: ['Asian', 'White','Two or More Races', 'Native Hawaiian/Pacific Islander', 'Black or African American','American Indian and Alaska Native'],
+  y: [3.31,33.7,1.57,0.11,7.51,0.73],
   name: 'USA',
+  marker: {color: '#b73225'},
   type: 'bar'
 };
 
@@ -316,7 +318,45 @@ var data = [trace1, trace2];
 
 var layout = {barmode: 'group',
         paper_bgcolor: "#dce1e3",
-        title: "Race: Hawai'i VS USA"
+        yaxis: {
+        title: 'Percent (%)',
+        },
+
+        title: "Race Percent: Hawai'i VS USA"
+
 };
 
 Plotly.newPlot('hiusabar', data, layout);
+
+var trace1 = {
+  x: ["English", "Spanish", "Indo-European", "Asian and Pacific Island", "Other"],
+  y: [73.9,2.19,1.13,22.2,0.61],
+  name: 'HI',
+  marker: {color: '#004e7c'},
+  type: 'bar'
+};
+
+var trace2 = {
+  x: ["English", "Spanish", "Indo-European", "Asian and Pacific Island", "Other"],
+  y: [78.1,13.4,3.7,3.6,1.2],
+  name: 'USA',
+  marker: {color: '#b73225'},
+  type: 'bar'
+};
+
+var data = [trace1, trace2];
+
+var layout = {barmode: 'group',
+        paper_bgcolor: "#dce1e3",
+        yaxis: {
+        title: 'Percent (%)',
+        },
+        xaxis: {
+        tickangle: 45,
+        },
+
+        title: "Language Percent: Hawai'i VS USA"
+
+};
+
+Plotly.newPlot('LangChart2', data, layout);
