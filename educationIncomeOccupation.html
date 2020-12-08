@@ -22,67 +22,132 @@
     <a class="item" href="process.html"><i class="sitemap icon"></i> The Process</a>
     <a class="item" href="aboutus.html"><i class="user icon"></i> About Us</a>
   </div>
-  <div id="as_question" style="width: 100%; float: left; text-align: center; margin-top: 2%; margin-bottom: 2%">
+ 
+ <!-- Question Header -->
+  <div style="width: 100%; float: left; text-align: center; margin-top: 2%; margin-bottom: 2%">
     <h2 style="color: #333333; font-family: Arial">Does education affect the income and types of jobs available in Hawaii?</h2>
   	<hr style="border: 2px solid black;">
   </div>
-
-  <div>
-  	<h3 style="text-align:center"> Hawaii Education Attainment by Sex (Over 25 Years Old)</h3>
-  	<div class="grid-container">
-	  <div id="table1" class="grid-child" style="height: 450px;width: 75%; padding-left: 10%; padding-top: 5%"></div>
-  	  <div id="educationbysex" class="grid-child" style="height: 500px;"></div>
+   
+  <!-- Education Attainment by Sex -->
+  <h3 style="text-align:center"> Hawaii Education Attainment by Sex (Over 25 Years Old)</h3>
+  <div class="ui row">
+    <div class="ui three column grid">
+      <div class="seven wide column">
+        <div id="edusextable"></div>
+      </div>
+      <div class="three wide column">
+        <div style="margin-top: 10%">
+          <p class="summary text">
+            To first determine if education affects the income and type of jobs available in Hawaii, we must first look at how Hawaii's population compares in getting different education levels. In this first set of data, the goal was to determine if there was a difference in education levels between males and females. Overall, there isn't much of a difference between the two. Both have the highest number of people with high school degrees as their highest education levels while the next highest values were with people with a Bachelor's Degree. From this particular data set, we can conclude that gender hasn't made a major impacted one's ability to gain a degree. 
+          </p>
+        </div>
+      </div>
+      <div class="six wide column">
+        <div id="edusexbar"></div>
+      </div>
     </div>
   </div>
-  <br><br>
-
-  <div>
-    <h3 style="text-align:center"> Hawaii Education Attainment by Race (Over 25 Years Old)</h3>
-    <div class="grid-container">
-      <div id="table2" class="grid-child" style="height: 470px;width: 90%; padding-left: 5%;"></div>
-  	  <div id="educationracepie" class="grid-child" style="height: 500px;"></div>
-  	</div>
+  
+  <!-- Education Attainment by Race -->
+  <h3 style="text-align:center"> Hawaii Education Attainment by Race (Over 25 Years Old)</h3>
+  <div class="ui row">
+    <div class="ui three column grid">
+      <div class="six wide column">
+        <div id="eduracetable"></div>
+      </div> 
+      <div class="three wide column">
+        <div style="margin-top: 10%">
+          <p class="summary text">
+            Since it was determined that gender hasn't made a major impact on getting a degree, we decided to see if race impacts one's ability to gain a degree. With someone's race, it goes beyond what their genetic makeup is. A person's race can also influence their beliefs, culture, home life, and so much more that can potentially affect how far one can take their education. Thus, it was interesting to see the results of the data. As expected, the races were pretty even when it came to obtaining a person's high school diploma, however, the numbers began to show a higher difference once it came to obtaining a college degree. People who labeled their ethnicity as white tend to have a much higher success rate in obtaining a college degree whereas people who labeled their ethnicity as islander had a much lower success rate, with a difference of 30%  between the two groups. This could indicated a number of things, however we know that race does play a part in one's ability to gain a degree. 
+          </p>
+        </div>
+      </div>  
+      <div class="seven wide column">
+        <div id="eduracepie"></div>
+      </div>  
+    </div>
+  </div>
+  
+  <!-- Hawaii Earnings by Education Attainment -->
+  <h3 style="text-align:center"> Hawaii Earnings by Education Attainment</h3>
+  <div class="ui row">
+    <div class="ui three column grid">
+      <div class="seven wide column">
+        <div id="earnedutable"></div>
+      </div>
+      <div class="three wide column">
+        <div style="margin-top: 10%">
+          <p class="summary text">
+            Now that we've established how education attainment is affected by gender and race, we can now see how education attainments are affecting other parts of life. In this first part, we can see how one's education level affects their income levels. As expected, the higher one's education level is, they tend to gain a higher income. However, what was interesting to see was the difference in income between genders with the same education level. The higher education level became, the difference in income between the genders also grew. Looking at the group with a graduate's degree, for example, shows that there is over a $20,000 difference between males and females. 
+          </p>
+        </div>
+      </div>
+      <div class="six wide column">
+        <div id="earnedubar"></div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Hawaii Poverty/Employment Rate by Education Attainment -->
+  <h3 style="text-align:center"> Hawaii Poverty & Employment Rate by Education Attainment</h3>
+  <div class="ui row">
+    <div class="ui three column grid">
+      <div class="seven wide column">
+        <div id="povertyemploymenttable"></div>
+      </div>
+      <div class="three wide column">
+        <div style="margin-top: 10%">
+          <p class="summary text">
+            The next set of data shows both the Poverty and Employment rate in Hawaii grouped by education attainment. As we can see, the employment rate goes up the higher the level of education one gains while the poverty rate goes down . This goes along with the previous data set where the income grows as one gains a higher level of education. This shows that there is actually a vast difference between the different levels. For example, if a high school graduate attempts some college courses, the employment rate increases by 3.5% while the poverty rate drops by a little over 4%. This shows that there is a higher chance for one to be "successful" if they increase their education level. 
+          </p>
+        </div>
+      </div>
+      <div class="six wide column">
+      	<div id="povertyemploymentbar"></div>
+      </div>
+    </div>
   </div>
 
-  <div>
-    <h3 style="text-align:center"> Hawaii Earning by Education Attainment</h3>
-    <div class="grid-container">
-      <div id="table3" class="grid-child" style="height: 470px;width: 95%; padding-left: 2%;padding-top: 8%"></div>
-  	  <div id="earningbyeducationbar" class="grid-child" style="height: 500px;"></div>
-  	</div>
-  </div>
-  <br><br>
-
-  <div>
-    <h3 style="text-align:center">Hawaii Poverty by Education Attainment</h3>
-    <div class="grid-container">
-      <div id="table4" class="grid-child" style="height: 300px;width: 77%; padding-left: 10%; padding-top: 5%"></div>
-  	  <div id="povertybyeducaionpie" class="grid-child" style="height: 400px;"></div>
-  	</div>
-  </div>
-
-  <div>
-    <h3 style="text-align:center">Hawaii Employment by Education Attainment</h3>
-    <div class="grid-container">
-      <div id="table5" class="grid-child" style="height: 300px;width: 77%; padding-left: 10%; padding-top:5%"></div>
-  	  <div id="employmentbyeducationpie" class="grid-child" style="height: 400px;"></div>
-  	</div>
-  </div>
-
-  <div>
-    <h3 style="text-align:center">Hawaii Employment by Race</h3>
-    <div class="grid-container">
-      <div id="table6" class="grid-child" style="height: 400px;width: 77%; padding-left: 10%;"></div>
-  	  <div id="employmentbyrace" class="grid-child" style="height: 500px;"></div>
-  	</div>
-  </div>
-
-  <div>
-    <h3 style="text-align:center">Hawaii Occupation Types</h3>
-    <div id="table7"></div>
-    <div id="occupationsalarygraph" style="padding-left: 10%; width: 80%"></div>
-    <div id="occupationemploymentpie" style="padding-left: 15%; width: 80%"></div>
-  </div>
+  <!-- Hawaii Employment by Race -->
+  <h3 style="text-align:center"> Hawaii Employment Rate by Race</h3>
+  <div class="ui row">
+    <div class="ui three column grid">
+      <div class="six wide column">
+        <div id="raceemploymenttable"></div>
+      </div>
+      <div class="four wide column">
+        <div style="margin-top: 10%">
+          <p class="summary text">
+            Now that we established that one's education level does influence a person's income and chances of being in poverty, we decided to see if the employment rate could also be affected by other things, in this case a person's race. As we saw earlier, race influenced a person's ability or desire to gain a higher level of education. Thus, it would be interesting to see if race also plays a part in a person's ability or desire to work. As we can see, in the data set, there is a slight difference in employment rates across different races. This could be because of their culture, beliefs, health pre dispositions, etc. For example, one's lifestyle that they learned from their culture may have them prefer the wives being full time mothers, thus it would lower the race's employment rate. If that is the case, then if one is just expecting to be a full time mom at home, they may not feel the need to go to a higher level education institution. 
+          </p>
+        </div>
+      </div>
+      <div class="six wide column">
+      	<div id="raceemploymentbar"></div>
+      </div>
+    </div>
+  </div> 
+  
+  <!-- Hawaii Occupation Types -->
+  <h3 style="text-align:center"> Hawaii Occupation Types</h3>
+  <div class="ui row">
+    <div class="ui two column grid">
+      <div class="ten wide column">
+        <div id="occupationtable"></div>
+      </div>
+      <div class="four wide column">
+        <div style="margin-top: 10%">
+          <p class="summary text">
+            This last data set is just to show the different types of occupations available in Hawaii and how much people are making in the different fields. It is interesting to see that the fields with higher average incomes usually are fields we associated with getting a higher degree, such as healthcare practitioners, architecture and engineering jobs, whereas the fields with a higher number of people working are usually fields we associate without needing a college degree, such as food preparations, office and administrative support, and sales jobs. 
+          </p>
+        </div>
+      </div>
+    </div>
+  </div> 
+  <div id="occupationbar" style="padding-left:10%;width:80%; margin:auto"></div>
+  <div id="occupationemploymentbar" style="padding-left:10%;width:80%; margin:auto"></div>
+  <br><br><br>
 
 </body>
 <script src="educationIncomeOccupation.js"></script>
