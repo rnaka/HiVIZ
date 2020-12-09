@@ -2,9 +2,19 @@
 
 var male= {
   x: ['< 9th Grade', '9th-12th Grade', 'High School Diploma', 'Some College', 'Associates Degree', 'Bachelors Degree', 'Graduates Degree'],
-  y: [14.98, 22.77,141.06,105.98, 50.49,99.23, 52.16],
+  y: [4.04, 6.37, 29.30, 15.55, 9.31, 22.29, 13.14],
   type: 'bar',
-  name: 'Male',
+  name: 'Male (US)',
+  marker: {
+    color: '#052061',
+  }
+};
+
+var male2= {
+  x: ['< 9th Grade', '9th-12th Grade', 'High School Diploma', 'Some College', 'Associates Degree', 'Bachelors Degree', 'Graduates Degree'],
+  y: [3.08, 4.68, 28.98, 21.78, 10.37, 20.39, 10.72],
+  type: 'bar',
+  name: 'Male (Hawaii)',
   marker: {
     color: '#004e7c',
   }
@@ -12,18 +22,29 @@ var male= {
 
 var female = {
   x:['< 9th Grade', '9th-12th Grade', 'High School Diploma', 'Some College', 'Associates Degree', 'Bachelors Degree', 'Graduates Degree'],
-  y: [22.42,20.53,132.57,101.88,54.69,112.83,56.7],
+  y: [3.74, 5.73, 27.01, 15.77, 11.15, 22.78, 13.82],
   type: 'bar',
-  name: 'Female',
+  name: 'Female (US)',
+  marker: {
+    color: '#730818',
+  }
+};
+
+var female2 = {
+  x:['< 9th Grade', '9th-12th Grade', 'High School Diploma', 'Some College', 'Associates Degree', 'Bachelors Degree', 'Graduates Degree'],
+  y: [4.47, 4.09, 26.43, 20.31, 10.90, 22.49, 11.3],
+  type: 'bar',
+  name: 'Female (Hawaii)',
   marker: {
     color: '#B73225',
   }
 };
 
-var data = [male, female];
+var data = [male, male2, female, female2];
 
 var layout = {
   paper_bgcolor: "#dce1e3",
+  title: "Education Attainment by Sex (percentile)",
   xaxis: {
     tickangle: 30
   },
@@ -36,14 +57,17 @@ Plotly.newPlot('edusexbar', data, layout);
 
 var values = [
       ['Less Than 9th Grade', '9th-12th Grade', 'High School Diploma', 'Some College', 'Associates Degree', 'Bachelors Degree', 'Graduates Degree'],
+      ["  4,313k", "  6,792k", "31,257k", "16,591k", "  9,936k", "23,785k", "14,021k"],
       [' 14.98k', ' 22.77k', '141.06k', '105.98k', '  50.49k', '  99.23k', '  52.16k'],
+    [" 4,290k", "  6,580k", "31,002k", "18,099k", 
+"12,802k", "26,151k", "15,858k"],
       ['  22.42k', '  20.53k', '132.57k', '101.88k', '  54.69k', '112.83k', '  56.79k']]
 
 var data = [{
   type: 'table',
   header: {
-    values: [["<b>EDUCATION ATTAINED</b>"], ["<b>MALE</b>"],
-				 ["<b>FEMALE</b>"]],
+    values: [["<b>EDUCATION ATTAINED</b>"], ["<b>MALE (US)</b>"],["<b>MALE (HAWAII)</b>"],["<b>FEMALE (US)</b>"],
+				 ["<b>FEMALE (HAWAII)</b>"]],
     align: ["center"],
     line: {width: 1, color: 'black'},
     fill: {color: ['#5C5F58']},
@@ -68,9 +92,9 @@ Plotly.newPlot('edusextable', data, layout);
 // Table - Education by Race
 
 var values = [
-      ['Asian', 'White', 'Multiple Races', 'Islander', 'Hispanic', 'Black', 'Other Race', 'Native American'],
-      ['88.7', '96.9', '94.0', '88.5', '90.3', '95.5', '86.4', '89.7'],
-      ['33.5', '45.7', '23.2', '13.0', '22.0', '28.8', '29.1', '28.4']]
+      ['US Average','Asian', 'White', 'Multiple Races', 'Islander', 'Hispanic', 'Black', 'Other Race', 'Native American'],
+      ['90.1','88.7', '96.9', '94.0', '88.5', '90.3', '95.5', '86.4', '89.7'],
+      ['46.3','33.5', '45.7', '23.2', '13.0', '22.0', '28.8', '29.1', '28.4']]
 
 var data = [{
   type: 'table',
@@ -98,57 +122,40 @@ var layout = {
 
 Plotly.newPlot('eduracetable', data, layout);
 
-// Pie - Education by Race
+// Bar - Education by Race
 
-var data = [{
-  values: ['88.7', '96.9', '94.0', '88.5', '90.3', '95.5', '86.4', '89.7'],
-  labels: ['Asian', 'White', 'Multiple Races', 'Islander', 'Hispanic', 'Black', 'Other Race', 'Native American'],
-  domain: {column: 0},
-  hoverinfo: 'label+percent',
-  type: 'pie',
-  marker: {
-    colors: ['#B73225','#004E7C','#591C0B','#304d35','#5C5F58','#052061','#730818','#000000']
+var trace1 = {
+  x: ['US Average','Asian', 'White', 'Multiple Races', 'Islander', 'Hispanic', 'Black', 'Other Race', 'Native American'],
+  y: ['90.1','88.7', '96.9', '94.0', '88.5', '90.3', '95.5', '86.4', '89.7'],
+  name: 'High School Rate',
+  type: 'bar',
+    marker: {
+    color: '#591C0B'
   },
-},{
-  values: ['33.5', '45.7', '23.2', '13.0', '22.0', '28.8', '29.1', '28.4'],
-  labels: ['Asian', 'White', 'Multiple Races', 'Islander', 'Hispanic', 'Black', 'Other Race', 'Native American'],
-  text: 'CO2',
-  textposition: 'inside',
-  domain: {column: 1},
-  name: 'CO2 Emissions',
-  hoverinfo: 'label+percent',
-  type: 'pie'
-}];
-
-var layout = {
-  paper_bgcolor: "#dce1e3",
-  annotations: [
-    {
-      font: {
-        size: 20
-      },
-      showarrow: false,
-      text: 'High School Rate',
-      x: 0.03,
-      y: -.2
-    },
-    {
-      font: {
-        size: 20
-      },
-      showarrow: false,
-      text: 'Bachelor Rate',
-      x: 0.93,
-      y: -.2
-    }
-  ],
-  height: 400,
-  width: 600,
-  showlegend: false,
-  grid: {rows: 1, columns: 2}
 };
 
-Plotly.newPlot('eduracepie', data, layout);
+var trace2 = {
+  x: ['USA OVERALL','Asian', 'White', 'Multiple Races', 'Islander', 'Hispanic', 'Black', 'Other Race', 'Native American'],
+  y: ['46.3','33.5', '45.7', '23.2', '13.0', '22.0', '28.8', '29.1', '28.4'],
+  name: 'College Rate',
+  type: 'bar',
+    marker: {
+    color: '#304d35'
+  },
+};
+
+var data = [trace1, trace2];
+
+var layout = {
+  barmode: 'group',
+  paper_bgcolor: "#dce1e3",
+  xaxis: {
+    tickangle: 30
+  }
+};
+
+Plotly.newPlot('eduracebar', data, layout);
+
 
 // Table - Earnings by Education
 
@@ -230,9 +237,9 @@ Plotly.newPlot('earnedubar', data, layout);
 // Table - Poverty and Employment Rate by Education Attainment
 
 var values = [
-      ['Some High School', 'High School Grad', 'Some College', 'Bachelors Degree and Higher'],
-      ['18.62','11.71','  7.81','  4.50'],
-      ['60.6','70.1','73.6','80.7'],]
+      ['US Average','Some High School', 'High School Grad', 'Some College', 'Bachelors Degree and Higher'],
+      ['10.51','18.62','11.71','  7.81','  4.50'],
+      ['60.8','60.6','70.1','73.6','80.7'],]
 
 var data = [{
   type: 'table',
@@ -262,8 +269,8 @@ Plotly.newPlot('povertyemploymenttable', data,layout);
 // Bar - Poverty and Employment rte by Education Attainment
 
 var povertyrate = {
-  x: ['Less Than High School', 'High School Grad', 'Some College', 'Bachelors Degree and Higher'],
-  y: [18.62, 11.71, 7.81,4.50],
+  x: ['US Average','Less Than High School', 'High School Grad', 'Some College', 'Bachelors Degree and Higher'],
+  y: [10.51,18.62, 11.71, 7.81,4.50],
   name: 'Poverty Rate',
   type: 'bar',
   marker: {
@@ -272,8 +279,8 @@ var povertyrate = {
 };
 
 var employmentrate = {
-  x: ['Less Than High School', 'High School Grad', 'Some College', 'Bachelors Degree and Higher'],
-  y: [60.6, 70.1, 73.6,80.7],
+  x: ['US Average','Less Than High School', 'High School Grad', 'Some College', 'Bachelors Degree and Higher'],
+  y: [60.8, 60.6, 70.1, 73.6,80.7],
   name: 'Employment Rate',
   type: 'bar',
   marker: {
@@ -296,8 +303,8 @@ Plotly.newPlot('povertyemploymentbar', data, layout);
 // Table = Employment by Race
 
 var values = [
-      ['2+ Races', 'Asian', 'Hispanic', 'Other','Hawaiian','White', 'White (Non-Hispanic)','Black', 'Indian'],
-      [64.3,60.6,59.6,57.9,57.6,54.2,54.1,48.4,48.3],]
+      ['US Average','2+ Races', 'Asian', 'Hispanic', 'Other','Hawaiian','White', 'White (Non-Hispanic)','Black', 'Indian'],
+      [60.8,64.3,60.6,59.6,57.9,57.6,54.2,54.1,48.4,48.3],]
 
 var data = [{
   type: 'table',
@@ -327,8 +334,8 @@ Plotly.newPlot('raceemploymenttable', data,layout);
 // Bar - Employment by Race
 
 var data = [{
-  y: [64.3,60.6,59.6,57.9,57.6,54.2,54.1,48.4,48.3],
-  x: ['2+ Races', 'Asian', 'Hispanic', 'Other','Hawaiian','White', 'White (Non-Hispanic)','Black', 'Indian'],
+  y: [60.8,64.3,60.6,59.6,57.9,57.6,54.2,54.1,48.4,48.3],
+  x: ['US Average','2+ Races', 'Asian', 'Hispanic', 'Other','Hawaiian','White', 'White (Non-Hispanic)','Black', 'Indian'],
   type: 'bar',
   marker: {
     color:'#304d35'

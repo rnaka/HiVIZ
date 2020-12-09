@@ -321,7 +321,9 @@ var layout = {barmode: 'group',
         yaxis: {
         title: 'Percent (%)',
         },
-
+        xaxis: {
+        tickangle: 20,
+        },
         title: "Race Percent: Hawai'i VS USA"
 
 };
@@ -352,11 +354,9 @@ var layout = {barmode: 'group',
         title: 'Percent (%)',
         },
         xaxis: {
-        tickangle: 45,
+        tickangle: 25,
         },
-
         title: "Language Percent: Hawai'i VS USA"
-
 };
 
 Plotly.newPlot('LangChart2', data, layout);
